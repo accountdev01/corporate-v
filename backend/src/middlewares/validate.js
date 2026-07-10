@@ -1,8 +1,7 @@
-// backend/src/middlewares/validate.js
 const { z } = require('zod');
 
 const vehicleSchemaZod = z.object({
-  number: z.string().min(2, "กรุณาระบุเลขทะเบียนหรือหมายเลขรถ"),
+  number: z.string().min(2, "กรุณาระบุเลขทะเบียนรถ"),
   brand: z.string().min(1, "กรุณาระบุยี่ห้อ"),
   model: z.string().min(1, "กรุณาระบุรุ่น"),
   notes: z.string().optional().default(""),
