@@ -1,7 +1,7 @@
 const vehicleService = require('../services/vehicleService');
 
 const handleServiceError = (res, error) => {
-  if (error.message === 'VEHICLE_NOT_FOUND') return res.status(404).json({ message: 'ไม่พบข้อมูลรถยนต์คันนี้' });
+  if (error.message === 'VEHICLE_NOT_FOUND') return res.status(404).json({ message: 'ไม่พบข้อมูลนี้' });
   if (error.message === 'VEHICLE_NUMBER_ALREADY_EXISTS') return res.status(400).json({ message: 'ทะเบียนรถนี้มีอยู่ในระบบแล้ว' });
   
   return res.status(500).json({ message: 'เกิดข้อผิดพลาดภายในเซิร์ฟเวอร์', error: error.message });
@@ -47,7 +47,7 @@ exports.updateVehicle = async (req, res) => {
 exports.deleteVehicle = async (req, res) => {
   try {
     await vehicleService.deleteVehicle(req.params.id);
-    res.status(200).json({ status: 'success', message: 'ลบข้อมูลรถยนต์เรียบร้อยแล้ว' });
+    res.status(200).json({ status: 'success', message: 'ลบข้อมูลเรียบร้อยแล้ว' });
   } catch (error) {
     handleServiceError(res, error);
   }
