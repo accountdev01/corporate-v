@@ -1,4 +1,3 @@
-// frontend/src/App.jsx
 import React, { useState } from 'react';
 import { Layout, Menu, theme, Typography, Avatar } from 'antd';
 import { CarOutlined, DashboardOutlined, SettingOutlined, UserOutlined } from '@ant-design/icons';

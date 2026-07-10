@@ -120,7 +120,6 @@ const VehicleDashboard = () => {
 
   return (
     <div>
-      {/* ส่วนหัวของ Dashboard พร้อมระบบค้นหาและการจัดวางแบบ Professional */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 24, flexWrap: 'wrap', gap: '16px' }}>
         <div>
           <Title level={4} style={{ margin: 0, fontWeight: 600 }}>รายชื่อยานพาหนะทั้งหมด</Title>
